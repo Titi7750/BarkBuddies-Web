@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Connexion Administrateur
+{% endblock %}
+
+{% block body %}
+	<nav class="menu">
+		{% block header %}
+			<a href="/"><img class="logo" src="/images/logo-tinder.png" alt="Logo Tinder pour BarkBuddies"></a>
+		{% endblock %}
+	</nav>
+	<div class="formulaire_connexion">
+		<form method="post" class="form_connexion">
+			{% if error %}
+				<div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+			{% endif %}
+
+			{% if app.user %}
+				<div class="mb-3">
+					Vous êtes connecté en tant que
+					{{ app.user.userIdentifier }},
+					<a href="{{ path('app_logout') }}">Se déconnecter</a>
+				</div>
+			{% endif %}
+
+
+			<h1 class="form_connexion_title">Se connecter</h1>
+			<label for="inputEmail">Adresse mail</label>
+			<input type="email" value="{{ last_username }}" name="email" id="inputEmail" placeholder="Votre adresse mail" class="input" autocomplete="email" required autofocus>
+			<label for="inputPassword">Mot de passe</label>
+			<input type="password" name="password" id="inputPassword" class="input" placeholder="Votre mot de passe" autocomplete="current-password" required>
+
+			<input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+			<button class="button" type="submit">
+				Se connecter
+			</button>
+		</form>
+	</div>
+{% endblock %}
