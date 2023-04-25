@@ -1,3 +1,7 @@
 controllers:
     resource: ../src/Controller/
     type: attribute
+
+admin_app_user_send_email:
+    path: '/admin/user/send-email/{id}'
+    controller: 'App\Controller\Admin\UserCrudController::sendEmail'
