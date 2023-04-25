@@ -52,6 +52,35 @@ body {
     font-size: 110%;
 }
 
+/* Compte à rebours */
+#countdown {
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px;
+    background: linear-gradient(90deg, #dc0b54 0%, #bc4b1e 100%);
+    color: #fff;
+}
+
+.countdown-number {
+    color: #F44336;
+    display: inline-block;
+    animation: countdown 1s ease-in-out infinite alternate;
+}
+
+@keyframes countdown {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+
+/* Formulaire inscription */
 .formulaire {
     margin-bottom: 30em;
 }

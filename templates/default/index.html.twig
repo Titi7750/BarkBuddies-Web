@@ -34,6 +34,10 @@
 			</div>
 			<img src="#" alt="image_application">
 		</div>
+		<div class="countdown">
+			<p id="countdown"></p>
+		</div>
+
 		<div class="formulaire">
 			<div class="form_title">
 				<h2>Être tenu au courant une fois que l'application pourra être utilisée</h2>
@@ -55,4 +59,35 @@
 			{{ form_end(form) }}
 		</div>
 	</div>
+	{% block javascripts %}
+    <script>
+        // définir la date limite
+        var countDownDate = new Date("April 28, 2023 15:00:00").getTime();
+
+        // mettre à jour le compte à rebours toutes les secondes
+        var x = setInterval(function() {
+
+            // obtenir la date actuelle
+            var now = new Date().getTime();
+
+            // calculer la différence entre la date limite et la date actuelle
+            var distance = countDownDate - now;
+
+            // calculer les jours, heures, minutes et secondes restantes
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // afficher les résultats dans un élément HTML avec l'ID "countdown"
+            document.getElementById("countdown").innerHTML = "L'application sera prête dans " + days + "j " + hours + "h " + minutes + "m " + seconds + "s ";
+
+            // afficher un message lorsque le compte à rebours est terminé
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "Application prête !";
+            }
+        }, 1000);
+    </script>
+{% endblock %}
 {% endblock %}
