@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}BarkBuddies
+{% endblock %}
+
+{% block body %}
+	<nav class="menu">
+		{% block header %}
+			<a href="/"><img class="logo" src="/images/logo-tinder.png" alt="Logo Tinder pour BarkBuddies"></a>
+		{% endblock %}
+	</nav>
+
+	<div class="container">
+		<div class="principal_title">
+			<h1>Trouvez votre âme soeur avec votre animal canin !</h1>
+		</div>
+		<div class="application">
+			<img src="#" alt="image_application">
+			<div class="explication_application">
+				<p>Tinder pour chiens est une application innovante conçue pour aider les propriétaires de chiens à trouver des amis canins pour leur animal de compagnie. Avec Tinder pour chiens, vous pouvez créer un profil pour votre chien, rechercher d'autres chiens en fonction de leur race, de leur âge, de leur taille et de leur localisation, et communiquer avec d'autres propriétaires de chiens pour organiser des rencontres pour vos animaux.
+				Notre application est facile à utiliser et conçue pour répondre aux besoins spécifiques des propriétaires de chiens. Nous savons à quel point il est important pour les chiens de socialiser et de rencontrer d'autres animaux, et nous avons créé Tinder pour chiens pour rendre ce processus plus facile et plus amusant que jamais.
+				Avec des fonctionnalités de recherche avancées, de correspondance et de communication, Tinder pour chiens est l'application idéale pour les propriétaires de chiens qui cherchent à élargir le cercle social de leur animal de compagnie. Essayez Tinder pour chiens dès maintenant et trouvez un ami canin pour votre chien en quelques minutes seulement !
+				</p>
+			</div>
+		</div>
+		<div class="profil_utilisateur">
+			<div class="explication_application">
+				<p>Créer un profil pour votre chien est facile avec Tinder pour chiens. Tout ce que vous avez à faire est de télécharger une photo de votre animal de compagnie et de remplir quelques informations de base sur sa personnalité et ses préférences.
+				Dans la section profil de votre chien, vous pouvez ajouter une description de sa personnalité et de ses comportements. Par exemple, vous pouvez mentionner s'il est actif ou calme, s'il aime jouer à la balle ou prendre des bains de soleil, ou s'il est amical avec d'autres chiens ou préfère rester à l'écart.
+				Vous pouvez également ajouter des informations sur les préférences de votre chien en matière de rencontres. Par exemple, vous pouvez préciser s'il préfère les chiens de sa race ou s'il est ouvert à rencontrer des chiens d'autres races. Vous pouvez également ajouter des informations sur les activités que votre chien aime faire, comme les promenades, les courses ou les jeux.
+				Enfin, vous pouvez ajouter des informations de contact pour que les autres propriétaires de chiens puissent vous contacter facilement. Vous pouvez ajouter votre adresse e-mail ou votre numéro de téléphone pour que les autres propriétaires puissent vous contacter pour organiser des rencontres pour vos chiens.
+				Avec un profil détaillé de votre chien sur Tinder pour chiens, vous aurez toutes les informations dont vous avez besoin pour trouver le compagnon idéal pour votre animal de compagnie.
+				</p>
+			</div>
+			<img src="#" alt="image_application">
+		</div>
+		<div class="formulaire">
+			<div class="form_title">
+				<h2>Être tenu au courant une fois que l'application pourra être utilisée</h2>
+			</div>
+			{{ form_start(form, {'attr':{'class':'form'}}) }}
+
+			{{ form_label(form.email) }}
+			{{ form_widget(form.email, {'attr':{'class':'input'}}) }}
+
+			{{ form_label(form.firstname) }}
+			{{ form_widget(form.firstname, {'attr':{'class':'input'}}) }}
+
+			{{ form_label(form.lastname) }}
+			{{ form_widget(form.lastname, {'attr':{'class':'input'}}) }}
+
+			{{ form_label(form.inscription) }}
+			{{ form_widget(form.inscription, {'attr':{'class':'button'}}) }}
+
+			{{ form_end(form) }}
+		</div>
+	</div>
+{% endblock %}
