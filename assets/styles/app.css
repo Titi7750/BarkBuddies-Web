@@ -30,7 +30,7 @@ body {
     padding: 5em;
 }
 
-.explication_application {
+.organization_div_flex {
     width: 50%;
     height: 100%;
     text-align: start;
@@ -40,6 +40,7 @@ body {
 .profil_utilisateur {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     background: linear-gradient(90deg, #dc0b54 0%, #bc4b1e 100%);
     color: #fff;
     padding: 5em;
@@ -52,12 +53,31 @@ body {
     font-size: 110%;
 }
 
+.organization_div {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(90deg, #dc0b54 0%, #bc4b1e 100%);
+    color: #fff;
+    font-size: 110%;
+    padding: 0 5em 2em 5em;
+}
+
+.div_title {
+    text-align: center;
+    font-size: 150%;
+}
+
+.image_tinder_emploi {
+    width: 50%;
+    height: 100%;
+    margin: 2em auto;
+}
+
 /* Compte à rebours */
 #countdown {
     font-size: 60px;
     font-weight: bold;
     text-align: center;
-    margin: 20px;
     background: linear-gradient(90deg, #dc0b54 0%, #bc4b1e 100%);
     color: #fff;
 }
@@ -68,17 +88,16 @@ body {
     animation: countdown 1s ease-in-out infinite alternate;
 }
 
-@keyframes countdown {
+@keyframes countdown { /* Animation du compte à rebours */
     0% {
-        transform: scale(1);
+        transform: scale(1); /* Taille de base */
     }
 
     100% {
-        transform: scale(1.5);
-        opacity: 0;
+        transform: scale(1.5);  /* Taille finale */
+        opacity: 0; /* Disparition */
     }
 }
-
 
 /* Formulaire inscription */
 .formulaire {
