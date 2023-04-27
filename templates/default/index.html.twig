@@ -12,10 +12,10 @@
 
 	<div class="container">
 		<div class="principal_title">
-			<h1>Trouvez votre âme soeur avec votre animal canin !</h1>
+			<h1>Trouvez l'âme soeur de votre chien !</h1>
 		</div>
 		<div class="application">
-			<img data-aos="fade-right" data-aos-duration="1000" src="#" alt="image_application">
+			<img class="applicationImage" data-aos="fade-right" data-aos-duration="1000" src="/images/applicationImage.jpeg" alt="image_application">
 			<div class="organization_div_flex">
 				<p data-aos="fade-left" data-aos-duration="1000" class="div_title">À quoi sert cette application ?</p>
 				<p data-aos="fade-left" data-aos-duration="1000">Cette application aide les propriétaires de chiens de compagnie à trouver des compagnons pour leurs animaux.
@@ -25,6 +25,9 @@
 				Elle est facile à utiliser et répond aux besoins des propriétaires d'animaux.
 				Essayez-la dès maintenant pour trouver un ami pour votre animal en quelques minutes seulement !
 				</p>
+				<div class="button_div">
+					<a href="https://tinder.com/fr/download" target="_blank" data-aos="fade-left" data-aos-duration="1000" class="button_download">Télécharger l'application</a>
+				</div>
 			</div>
 		</div>
 		<div class="profil_utilisateur">
@@ -36,21 +39,32 @@
 				Vous pouvez ajouter une description de ses comportements et de ses préférences en matière de rencontres, ainsi que des informations de contact.
 				Avec un profil détaillé, vous pouvez trouver facilement un compagnon pour votre animal.
 				</p>
+				<div class="button_div">
+					<a href="https://tinder.com/fr/" target="_blank" data-aos="fade-left" data-aos-duration="1000" class="button_download">Se créer un compte</a>
+				</div>
 			</div>
-			<img data-aos="fade-left" data-aos-duration="1000" src="/images/profil-tinder.jpg" alt="image_application">
+			<img class="utilisateurImage" data-aos="fade-left" data-aos-duration="1000" src="/images/creation-compte.png" alt="image_application">
+		</div>
+		<div class="profil_utilisateur1">
+			<img class="utilisateurImage1" data-aos="fade-right" data-aos-duration="1000" src="/images/creation-compte1.png" alt="image_application">
+			<img class="utilisateurImage1" data-aos="fade-left" data-aos-duration="1000" src="/images/creation-compte2.png" alt="image_application">
 		</div>
 		<div class="organization_div">
 			<p class="div_title" data-aos="zoom-in" data-aos-duration="1000">Élargir le cercle Social de votre animal</p>
 			<p data-aos="zoom-in" data-aos-duration="1000">Avec Tinder pour chiens, vous pouvez élargir le cercle social de votre animal de compagnie en quelques minutes seulement.
 			Notre application est conçue pour répondre aux besoins spécifiques des propriétaires de chiens, avec des fonctionnalités de recherche avancées,
 			de correspondance et de communication.</p>
-			<img data-aos="zoom-in" data-aos-duration="1000" class="image_tinder_emploi" src="/images/gps-tinder.jpg" alt="Mode emploi Tinder">
+			<img class="utilisateurImage2" data-aos="zoom-in" data-aos-duration="1000" class="image_tinder_emploi" src="/images/creation-compte3.png" alt="Mode emploi Tinder">
 		</div>
-		<div class="organization_div">
+		<div class="organization_div1">
 			<p data-aos="zoom-in" data-aos-duration="1000" class="div_title">Vous êtes un habitué de Tinder ?</p>
 			<p data-aos="zoom-in" data-aos-duration="1000">Vous n'aurez aucun mal à utiliser Tinder pour chiens.
 			<br>L'application est conçue pour être facile à utiliser et intuitive, même pour les personnes qui n'ont jamais utilisé Tinder auparavant.</p>
-			<img data-aos="zoom-in" data-aos-duration="1000" class="image_tinder_emploi" src="/images/mode-emploi-tinder.jpg" alt="Mode emploi Tinder">
+			<div class="flex_image">
+				<img class="etape" data-aos="zoom-in" data-aos-duration="1000" class="image_tinder_emploi" src="/images/etape.png" alt="Mode emploi Tinder">
+				<img class="etape2" data-aos="zoom-in" data-aos-duration="1000" class="image_tinder_emploi" src="/images/etape2.png" alt="Mode emploi Tinder">
+				<img class="etape3" data-aos="zoom-in" data-aos-duration="1000" class="image_tinder_emploi" src="/images/etape3.png" alt="Mode emploi Tinder">
+			</div>
 		</div>
 		<div class="countdown">
 			<p id="countdown"></p>
@@ -74,6 +88,9 @@
 			{{ form_widget(form.inscription, {'attr':{'class':'button'}}) }}
 
 			{{ form_end(form) }}
+		</div>
+		<div class="footer">
+			<a href="/"><img class="logo" src="/images/logo-tinder.png" alt="Logo Tinder pour BarkBuddies"></a>
 		</div>
 	</div>
 	{% block javascripts %}
