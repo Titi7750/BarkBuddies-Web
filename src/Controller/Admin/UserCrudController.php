@@ -12,19 +12,16 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\ChoiceField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
 class UserCrudController extends AbstractCrudController
 {
     private $userPasswordHasher;
-    private $mailer;
     private $managerRegistry;
 
-    public function __construct(UserPasswordHasherInterface $userPasswordHasher, MailerInterface $mailer, ManagerRegistry $managerRegistry)
+    public function __construct(UserPasswordHasherInterface $userPasswordHasher, ManagerRegistry $managerRegistry)
     {
         $this->userPasswordHasher = $userPasswordHasher;
-        $this->mailer = $mailer;
         $this->managerRegistry = $managerRegistry;
     }
 
