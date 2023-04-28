@@ -13,7 +13,11 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 
+/**
+ * @IsGranted("ROLE_MARKETING")
+ */
 class UserCrudController extends AbstractCrudController
 {
     private $userPasswordHasher;
@@ -38,7 +42,6 @@ class UserCrudController extends AbstractCrudController
                     'id' => $entity->getId(),
                 ];
             })
-            ->addCssClass('btn btn-secondary')
             ->setIcon('fas fa-envelope');
 
         return $actions
